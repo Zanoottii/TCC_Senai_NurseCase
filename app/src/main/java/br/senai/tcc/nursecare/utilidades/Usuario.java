@@ -1,6 +1,8 @@
-package br.senai.tcc.nursecare;
+package br.senai.tcc.nursecare.utilidades;
 
 import android.graphics.Bitmap;
+
+import br.senai.tcc.nursecare.modelos.Paciente;
 
 public class Usuario {
 
@@ -21,14 +23,6 @@ public class Usuario {
 
     public static void clearInstance() {
         usuario = null;
-    }
-
-    public static Usuario getUsuario() {
-        return usuario;
-    }
-
-    public static void setUsuario(Usuario usuario) {
-        Usuario.usuario = usuario;
     }
 
     public String getEmail() {

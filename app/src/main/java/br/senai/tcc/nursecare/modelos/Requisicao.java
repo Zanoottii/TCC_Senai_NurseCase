@@ -1,4 +1,4 @@
-package br.senai.tcc.nursecare;
+package br.senai.tcc.nursecare.modelos;
 
 import com.google.firebase.firestore.Exclude;
 import com.google.firebase.firestore.IgnoreExtraProperties;

@@ -1,4 +1,4 @@
-package br.senai.tcc.nursecare;
+package br.senai.tcc.nursecare.modelos;
 
 public class Paciente {
     private String nome, sobrenome, cpf, nascimento, celular, cep, logradouro, numero, complemento, bairro, municipio, uf, latitude, longitude, cartao, titular, validade, cvv;

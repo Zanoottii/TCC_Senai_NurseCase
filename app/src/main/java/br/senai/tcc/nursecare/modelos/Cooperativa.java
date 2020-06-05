@@ -1,4 +1,4 @@
-package br.senai.tcc.nursecare;
+package br.senai.tcc.nursecare.modelos;
 
 public class Cooperativa {
     private String nome, cnpj, municipio, uf;

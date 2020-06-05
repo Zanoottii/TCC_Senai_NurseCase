@@ -1,4 +1,4 @@
-package br.senai.tcc.nursecare;
+package br.senai.tcc.nursecare.modelos;
 
 public class Enfermeiro {
     String nome, sobrenome, coren;
