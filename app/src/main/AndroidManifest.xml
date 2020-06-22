@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.senai.tcc.nursecare">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".servicos.NotificacaoService"
+            android:enabled="true"
+            android:exported="true" />
+        <activity android:name=".telas.SplashActivity"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".telas.LoginActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name=".telas.CadastroActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name=".telas.MainActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name=".telas.UsuarioActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name=".telas.EditarActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name=".telas.AgendamentoActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name=".telas.AtendimentoActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name=".telas.DetalhesActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name=".telas.HistoricoActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name=".telas.InformacoesActivity"
+                  android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

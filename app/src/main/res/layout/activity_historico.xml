@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".telas.HistoricoActivity">
+
+    <LinearLayout
+        android:id="@+id/llLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_gradiente"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:padding="10dp"
+            app:srcCompat="@drawable/nursecare_peq" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llLogo">
+
+        <ImageView
+            android:id="@+id/ivMesAnterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingStart="20dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="20dp"
+            app:srcCompat="@drawable/ic_arrow_left" />
+
+        <TextView
+            android:id="@+id/tvMes"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="20dp"
+            android:text="Mes / Ano"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/ivMesProximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingStart="20dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="20dp"
+            app:srcCompat="@drawable/ic_arrow_right" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vDivMes"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llMes" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHistorico"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tvTotal"
+        app:layout_constraintTop_toBottomOf="@+id/vDivMes" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:paddingStart="16dp"
+        android:text="Total no mês: R$ 0,00"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvHistorico" />
+
+    <TextView
+        android:id="@+id/tvNenhum"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Não foi realizado nenhum pagamento neste mês"
+        android:textSize="30sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/tvTotal"
+        app:layout_constraintTop_toBottomOf="@+id/llMes" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/fundo_sombra"
+        app:layout_constraintTop_toBottomOf="@+id/llLogo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

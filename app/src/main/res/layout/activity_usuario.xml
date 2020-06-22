@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".telas.UsuarioActivity">
+
+    <LinearLayout
+        android:id="@+id/llLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_gradiente"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:padding="10dp"
+            app:srcCompat="@drawable/nursecare_peq" />
+    </LinearLayout>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/civFotoUsuario"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:civ_border="true"
+        app:civ_border_color="#000000"
+        app:civ_border_width="2dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#000000"
+        app:civ_shadow_gravity="bottom"
+        app:civ_shadow_radius="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llLogo"
+        app:srcCompat="@drawable/paciente" />
+
+    <ImageView
+        android:id="@+id/ivFotoEditar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/botao_editar"
+        android:padding="10dp"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/civFotoUsuario"
+        app:layout_constraintEnd_toEndOf="@+id/civFotoUsuario"
+        app:srcCompat="@drawable/ic_edit" />
+
+    <View
+        android:id="@+id/vDivFoto"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/civFotoUsuario" />
+
+    <TextView
+        android:id="@+id/tvDadosUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        android:text="Dados do paciente"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vDivFoto" />
+
+    <TextView
+        android:id="@+id/tvDadosInfUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingStart="80dp"
+        android:text="Nome, E-mail, CPF, Telefone, etc"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDadosUsuario" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/vDivDados"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vDivFoto"
+        app:srcCompat="@drawable/ic_arrow_right" />
+
+    <ImageView
+        android:id="@+id/ivDadosUsuario"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="12dp"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toTopOf="@id/vDivDados"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vDivFoto"
+        app:srcCompat="@drawable/ic_person" />
+
+    <View
+        android:id="@+id/vDivDados"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDadosInfUsuario" />
+
+    <TextView
+        android:id="@+id/tvEnderecoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        android:text="Endereço do paciente"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vDivDados" />
+
+    <TextView
+        android:id="@+id/tvEnderecoInfUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingStart="80dp"
+        android:text="Local para atendimento"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnderecoUsuario" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/vDivEndereco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vDivDados"
+        app:srcCompat="@drawable/ic_arrow_right" />
+
+    <ImageView
+        android:id="@+id/ivEnderecoUsuario"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="12dp"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toTopOf="@id/vDivEndereco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vDivDados"
+        app:srcCompat="@drawable/ic_home" />
+
+    <View
+        android:id="@+id/vDivEndereco"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnderecoInfUsuario" />
+
+    <TextView
+        android:id="@+id/tvPagamentoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        android:text="Forma de pagamento"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vDivEndereco" />
+
+    <TextView
+        android:id="@+id/tvPagamentoInfUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingStart="80dp"
+        android:text="Cartão de crédito cadastrado"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPagamentoUsuario" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/vDivPagamento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vDivEndereco"
+        app:srcCompat="@drawable/ic_arrow_right" />
+
+    <ImageView
+        android:id="@+id/ivPagamentoUsuario"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="12dp"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toTopOf="@id/vDivPagamento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vDivEndereco"
+        app:srcCompat="@drawable/ic_credit_card" />
+
+    <View
+        android:id="@+id/vDivPagamento"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPagamentoInfUsuario" />
+
+    <Button
+        android:id="@+id/bDeslogar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:drawable/btn_default_small"
+        android:text="Deslogar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vDivPagamento" />
+
+    <LinearLayout
+        android:id="@+id/llFotoCheia"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#CC000000"
+        android:translationZ="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llLogo">
+
+        <ImageView
+            android:id="@+id/ivFotoCheia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_launcher_background" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/fundo_sombra"
+        app:layout_constraintTop_toBottomOf="@+id/llLogo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

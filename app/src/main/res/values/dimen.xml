@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dois_dp">2dp</dimen>
+    <dimen name="quatro_dp">4dp</dimen>
+    <dimen name="seis_dp">6dp</dimen>
+    <dimen name="oito_dp">8dp</dimen>
+    <dimen name="dez_dp">10dp</dimen>
+</resources>

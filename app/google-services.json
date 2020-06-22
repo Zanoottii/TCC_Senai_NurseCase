@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "730936979734",
+    "firebase_url": "https://nursecare-f82fa.firebaseio.com",
+    "project_id": "nursecare-f82fa",
+    "storage_bucket": "nursecare-f82fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730936979734:android:569e8a41e9f0252104e037",
+        "android_client_info": {
+          "package_name": "br.senai.tcc.nursecare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730936979734-p1hesoljbsvfq2j3bu76ajblpfj5mp52.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.senai.tcc.nursecare",
+            "certificate_hash": "8c396b399b3527a3e3df2551d7ffc08ce5895417"
+          }
+        },
+        {
+          "client_id": "730936979734-3l06248rid2l2t6ee0cuqh437698cml9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbwImiMH4nREadWA829HJAaO9hU4vMghg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730936979734-3l06248rid2l2t6ee0cuqh437698cml9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730936979734:android:6e917459d5197b6e04e037",
+        "android_client_info": {
+          "package_name": "br.senai.tcc.nursecarework"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730936979734-og40dj3ctekdr3vtf2rhkvkbolnif2gb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.senai.tcc.nursecarework",
+            "certificate_hash": "7e5b86855160ed0638a0793bcbe6604a521629f7"
+          }
+        },
+        {
+          "client_id": "730936979734-3l06248rid2l2t6ee0cuqh437698cml9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbwImiMH4nREadWA829HJAaO9hU4vMghg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730936979734-3l06248rid2l2t6ee0cuqh437698cml9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

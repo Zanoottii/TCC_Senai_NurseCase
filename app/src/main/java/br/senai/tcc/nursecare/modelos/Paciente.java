@@ -1,7 +1,8 @@
 package br.senai.tcc.nursecare.modelos;
 
 public class Paciente {
-    private String nome, sobrenome, cpf, nascimento, celular, cep, logradouro, numero, complemento, bairro, municipio, uf, latitude, longitude, cartao, titular, validade, cvv;
+    private String nome, sobrenome, cpf, nascimento, celular, cep, logradouro, numero, complemento, bairro, municipio, uf, cartao, titular, validade, cvv;
+    private double latitude, longitude;
 
     public String getNome() {
         return nome;
@@ -99,22 +100,6 @@ public class Paciente {
         this.uf = uf;
     }
 
-    public String getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
-    }
-
-    public String getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(String longitude) {
-        this.longitude = longitude;
-    }
-
     public String getCartao() {
         return cartao;
     }
@@ -145,5 +130,21 @@ public class Paciente {
 
     public void setCvv(String cvv) {
         this.cvv = cvv;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 }

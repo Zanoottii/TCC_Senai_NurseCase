@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    tools:context=".telas.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/llSuperior"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_gradiente"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="148dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/nursecare" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llInferior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/fundo_login"
+        android:elevation="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llSuperior">
+
+        <EditText
+            android:id="@+id/etEmailLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:drawableLeft="@drawable/ic_email_contact"
+            android:drawablePadding="10dp"
+            android:elevation="5dp"
+            android:ems="10"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:paddingLeft="15dp"
+            android:shadowColor="@android:color/darker_gray"
+            android:shadowRadius="1"
+            android:theme="@style/TextInputTheme" />
+
+        <EditText
+            android:id="@+id/etSenhaLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="10dp"
+            android:elevation="5dp"
+            android:ems="10"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:paddingLeft="15dp"
+            android:shadowColor="@android:color/darker_gray"
+            android:shadowRadius="1"
+            android:theme="@style/TextInputTheme" />
+
+        <Button
+            android:id="@+id/bEntrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:backgroundTintMode="multiply"
+            android:elevation="5dp"
+            android:text="Entrar"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/bCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:backgroundTint="#DDDDDD"
+            android:backgroundTintMode="multiply"
+            android:elevation="5dp"
+            android:text="Cadastrar" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/fundo_sombra"
+        app:layout_constraintTop_toBottomOf="@+id/llSuperior" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

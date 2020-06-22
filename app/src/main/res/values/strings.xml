@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">NurseCare</string>
+
+    <string-array name="uf">
+        <item>UF</item>
+        <item>AC</item>
+        <item>AL</item>
+        <item>AM</item>
+        <item>AP</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MG</item>
+        <item>MS</item>
+        <item>MT</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>PR</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>RS</item>
+        <item>SC</item>
+        <item>SE</item>
+        <item>SP</item>
+        <item>TO</item>
+    </string-array>
+
+    <string-array name="mes">
+        <item>Janeiro</item>
+        <item>Fevereiro</item>
+        <item>Março</item>
+        <item>Abril</item>
+        <item>Maio</item>
+        <item>Junho</item>
+        <item>Julho</item>
+        <item>Agosto</item>
+        <item>Setembro</item>
+        <item>Outubro</item>
+        <item>Novembro</item>
+        <item>Dezembro</item>
+    </string-array>
+
+    <string-array name="servicos">
+        <item>Aplicação de medicamentos</item>
+        <item>Aspirações</item>
+        <item>Clister ou lavagem intestinal</item>
+        <item>Cuidados com drenos e cateteres</item>
+        <item>Passagem de sonda de alimentação ou sonda vesical</item>
+        <item>Preparação para realização de exames (colonoscopia)</item>
+        <item>Realização de banho de aspersão ou banho de leito</item>
+        <item>Realização de curativos</item>
+        <item>Retirada de pontos</item>
+        <item>Tratamento de lesões de pele</item>
+        <item>Tricotomia</item>
+        <item>Troca de colostomia</item>
+    </string-array>
+
+    <string name="intro_servico">O NurseCare é um aplicativo que conecta o paciente que necessita de cuidados a um enfermeiro disponível na região. Abaixo está a lista de serviços oferecido:</string>
+
+    <string name="descricao_servico_01_1">O procedimento de aplicação de medicamento realizado por um profissional da saúde, proporciona segurança, tanto no modo de aplicação, quanto na dosagem ideal da medicação, evitando possíveis infecções, aplicação de dosagem em excesso e a automedicação.</string>
+
+    <string name="descricao_servico_02_1">Este procedimento tem como finalidade a remoção de secreções das vias aéreas, para pacientes que não conseguem expelir de forma natural o acúmulo destas secreções. É introduzido uma sonda por via oral, nasal ou endotraqueal que fará a remoção da secreção por meio da sucção utilizando um aparelho aspirador.</string>
+
+    <string name="descricao_servico_03_1">O procedimento de clister ou lavagem intestinal é indicado normalmente em caso de prisão de ventre, onde é inserido líquidos no intestino do paciente através de um pequeno tubo introduzido no ânus. Ao ser realizado por um enfermeiro qualificado, o risco de perfuração do intestino, infecções e desconforto são reduzidos.</string>
+
+    <string name="descricao_servico_04_1">Há diversos tipos de drenos e cateteres, que podem ser inseridos de diversos modos. Para garantir o máximo de conforto e a manipulação correta, evitando assim erros e agravamentos, é essencial a ajuda de um profissional de enfermagem.</string>
+
+    <string name="descricao_servico_05_1">O procedimento consiste na introdução ou a troca de sonda. A sonda de alimentação é introduzida pelo nariz ou diretamente através de corte no estômago ou intestino delgado, com o objetivo de introduzir medicamentos e alimentar o paciente. A sonda vesical é introduzida no canal da uretra e vai até o interior da bexiga, com o objetivo de aliviar ou controlar o fluxo urinário.</string>
+
+    <string name="descricao_servico_06_1">O profissional fará a analise de todas as necessidades e ações a serem tomadas para que o exame seja realizado com o máximo de segurança e eficácia.</string>
+
+    <string name="descricao_servico_07_1">O banho de aspersão ou banho de leito são importantes no cuidado diário para remoção de micro-organismos e odores, e são realizados em pacientes que não conseguem realizar sua própria higiene corporal.</string>
+
+    <string name="descricao_servico_08_1">A realização de curativo no tratamento de qualquer tipo de ferida. O serviço em domicilio oferece conforto e segurança ao paciente, já que diminui os riscos de infecção cruzada.</string>
+
+    <string name="descricao_servico_09_1">Após a cicatrização de um corte é necessário a remoção dos pontos. Tal procedimento pode ser realizado em casa por um profissional da saúde, que conta com ferramenta esterilizadas e técnicas que reduzem o desconforto no local.</string>
+
+    <string name="descricao_servico_10_1">O profissional realizará um tratamento adequado para cada tipo de lesão de pele, seja ela causada por doença, alergia ou lesão física. Poderá conforme a necessidade do paciente, a limpeza do local, remoção de objetos estranhos, aplicação de medicamentos, pomadas e curativos.</string>
+
+    <string name="descricao_servico_11_1">O procedimento de tricotomia é realizado com a utilização de um tricotomizador elétrico, possibilitando de forma segura, a remoção total ou parcial de pelos corporais sem que ocorra lesões na pele, com a finalidade de facilitar a limpeza e desinfecção da pele na área que será operada.</string>
+
+    <string name="descricao_servico_12_1">O procedimento contempla a troca da bolsa coletora e limpeza da pele ao redor do estoma.</string>
+</resources>

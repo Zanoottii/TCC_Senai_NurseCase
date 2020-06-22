@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".telas.InformacoesActivity">
+
+    <LinearLayout
+        android:id="@+id/llLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_gradiente"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:padding="10dp"
+            app:srcCompat="@drawable/nursecare_peq" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llLogo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvIntroServico"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="@string/intro_servico"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvLabelServico01"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/design_default_color_primary"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Serviço 01"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvIntroServico" />
+
+            <ImageView
+                android:id="@+id/ivLabelServico01"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:scaleType="fitEnd"
+                android:tint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelServico01"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelServico01"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/llServico01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelServico01">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/descricao_servico_01_1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLabelServico02"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/design_default_color_primary"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Serviço 02"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llServico01" />
+
+            <ImageView
+                android:id="@+id/ivLabelServico02"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:scaleType="fitEnd"
+                android:tint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelServico02"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelServico02"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/llServico02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelServico02">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/descricao_servico_02_1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLabelServico03"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/design_default_color_primary"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Serviço 03"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llServico02" />
+
+            <ImageView
+                android:id="@+id/ivLabelServico03"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:scaleType="fitEnd"
+                android:tint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelServico03"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelServico03"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/llServico03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelServico03">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/descricao_servico_03_1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLabelServico04"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/design_default_color_primary"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Serviço 04"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llServico03" />
+
+            <ImageView
+                android:id="@+id/ivLabelServico04"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:scaleType="fitEnd"
+                android:tint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelServico04"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelServico04"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/llServico04"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelServico04">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/descricao_servico_04_1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLabelServico05"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/design_default_color_primary"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Serviço 05"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llServico04" />
+
+            <ImageView
+                android:id="@+id/ivLabelServico05"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:scaleType="fitEnd"
+                android:tint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelServico05"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelServico05"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/llServico05"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelServico05">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/descricao_servico_05_1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLabelServico06"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/design_default_color_primary"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Serviço 06"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llServico05" />
+
+            <ImageView
+                android:id="@+id/ivLabelServico06"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:scaleType="fitEnd"
+                android:tint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelServico06"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelServico06"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/llServico06"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelServico06">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/descricao_servico_06_1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLabelServico07"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/design_default_color_primary"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Serviço 07"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llServico06" />
+
+            <ImageView
+                android:id="@+id/ivLabelServico07"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:scaleType="fitEnd"
+                android:tint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelServico07"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelServico07"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/llServico07"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelServico07">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/descricao_servico_07_1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLabelServico08"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/design_default_color_primary"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Serviço 08"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llServico07" />
+
+            <ImageView
+                android:id="@+id/ivLabelServico08"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:scaleType="fitEnd"
+                android:tint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelServico08"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelServico08"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/llServico08"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelServico08">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/descricao_servico_08_1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLabelServico09"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/design_default_color_primary"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Serviço 09"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llServico08" />
+
+            <ImageView
+                android:id="@+id/ivLabelServico09"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:scaleType="fitEnd"
+                android:tint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelServico09"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelServico09"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/llServico09"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelServico09">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/descricao_servico_09_1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLabelServico10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/design_default_color_primary"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Serviço 10"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llServico09" />
+
+            <ImageView
+                android:id="@+id/ivLabelServico10"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:scaleType="fitEnd"
+                android:tint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelServico10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelServico10"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/llServico10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelServico10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/descricao_servico_10_1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLabelServico11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/design_default_color_primary"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Serviço 11"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llServico10" />
+
+            <ImageView
+                android:id="@+id/ivLabelServico11"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:scaleType="fitEnd"
+                android:tint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelServico11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelServico11"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/llServico11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelServico11">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/descricao_servico_11_1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLabelServico12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/design_default_color_primary"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Serviço 12"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llServico11" />
+
+            <ImageView
+                android:id="@+id/ivLabelServico12"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:scaleType="fitEnd"
+                android:tint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelServico12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelServico12"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <LinearLayout
+                android:id="@+id/llServico12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelServico12">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/descricao_servico_12_1" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/fundo_sombra"
+        app:layout_constraintTop_toBottomOf="@+id/llLogo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    tools:context=".telas.agendamento.PagarFragment">
+
+    <TextView
+        android:id="@+id/tvDescricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Forma de pagamento"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgPagar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescricao">
+
+        <RadioButton
+            android:id="@+id/rbMeuCartao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Meu cartão de crédito cadastrado"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/llMeuCartao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="30dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tvMeuCartao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Parcelamento"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <Spinner
+                android:id="@+id/sMeuCartaoParcelas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:spinnerMode="dialog"
+                android:theme="@style/SpinnerItemTheme" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@android:color/background_dark" />
+
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/rbDinheiro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dinheiro"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/llDinheiro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="30dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvDinheiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tenha o dinheiro na quantia certa e evite o troco."
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/rbOutroCartao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Outro cartão de crédito"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/llOutroCartao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="30dp"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextInputTheme">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etOutroNumeroCartao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Número do cartão"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextInputTheme">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etOutroNomeCartao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nome impresso no cartão"
+                    android:inputType="textCapWords|textPersonName"
+                    android:maxLength="32" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:theme="@style/TextInputTheme">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etOutroDataValidade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:hint="Validade"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:theme="@style/TextInputTheme">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etOutroCvv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_info"
+                        android:hint="CVV"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Parcelamento"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <Spinner
+                android:id="@+id/sOutroCartaoParcelas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:spinnerMode="dialog"
+                android:theme="@style/SpinnerItemTheme" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@android:color/background_dark" />
+
+        </LinearLayout>
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
