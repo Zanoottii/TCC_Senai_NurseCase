@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import br.senai.tcc.nursecare.R;
 import br.senai.tcc.nursecare.modelos.Paciente;
@@ -44,7 +45,7 @@ public class RevisaoFragment extends Fragment {
 
         tvNome.setText(paciente.getNome() + " " + paciente.getSobrenome());
         tvLocal.setText(requisicao.getEndereco());
-        tvDataHora.setText(new SimpleDateFormat("dd/MM/yyyy HH:mm").format(new Date(requisicao.getDatahora())));
+        tvDataHora.setText(new SimpleDateFormat("dd/MM/yyyy HH:mm", new Locale("pt", "BR")).format(new Date(requisicao.getDatahora())));
         if (servico.size() > 1) tvLabelServico.setText("Serviços solicitados");
         tvServico.setText("\u2022 " + TextUtils.join("\n\u2022 ", servico));
         tvPagamento.setText(requisicao.getCartao().isEmpty() ? requisicao.getPagamento() : "Cartão de crédito (Final " + requisicao.getCartao().substring(12) + ")\n" + requisicao.getPagamento());

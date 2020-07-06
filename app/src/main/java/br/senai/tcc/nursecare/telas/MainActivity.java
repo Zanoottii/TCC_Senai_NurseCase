@@ -17,6 +17,7 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 import br.senai.tcc.nursecare.R;
 import br.senai.tcc.nursecare.modelos.Paciente;
@@ -134,11 +135,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void exibeRecado(long datahora) {
         int hora = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        Locale locale = new Locale("pt", "BR");
         tvRecado.setText(String.format("%s, %s.\nSeu próximo atendimento será dia %s às %s.",
                 hora < 6 || hora >= 18 ? "Boa noite" : (hora >= 12 ? "Boa tarde" : "Bom dia"),
                 paciente.getNome(),
-                new SimpleDateFormat("dd/MM").format(datahora),
-                new SimpleDateFormat("HH:mm").format(datahora)
+                new SimpleDateFormat("dd/MM", locale).format(datahora),
+                new SimpleDateFormat("HH:mm", locale).format(datahora)
         ));
         clRecado.setVisibility(View.VISIBLE);
     }

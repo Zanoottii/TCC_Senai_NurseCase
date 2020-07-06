@@ -1,5 +1,8 @@
 package br.senai.tcc.nursecare.modelos;
 
+import com.google.firebase.firestore.IgnoreExtraProperties;
+
+@IgnoreExtraProperties
 public class Paciente {
     private String nome, sobrenome, cpf, nascimento, celular, cep, logradouro, numero, complemento, bairro, municipio, uf, cartao, titular, validade, cvv;
     private double latitude, longitude;

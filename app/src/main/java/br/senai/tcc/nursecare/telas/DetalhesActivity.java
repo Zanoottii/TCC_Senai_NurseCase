@@ -18,6 +18,7 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 import br.senai.tcc.nursecare.R;
 import br.senai.tcc.nursecare.modelos.Cooperativa;
@@ -67,7 +68,7 @@ public class DetalhesActivity extends AppCompatActivity implements View.OnClickL
         if (servico.size() > 1) tvLabelDtServico.setText("Serviços");
         tvDtServico.setText("\u2022 " + TextUtils.join("\n\u2022 ", servico));
 
-        tvDataHora.setText(new SimpleDateFormat("dd/MM/yyyy HH:mm").format(requisicao.getDatahora()));
+        tvDataHora.setText(new SimpleDateFormat("dd/MM/yyyy HH:mm", new Locale("pt", "BR")).format(requisicao.getDatahora()));
 
         int estado = requisicao.getEstado();
 
@@ -139,13 +140,13 @@ public class DetalhesActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         new AlertDialog.Builder(this)
-                .setCancelable(true)
+                .setCancelable(false)
                 .setTitle("Cancelar")
                 .setMessage("Deseja realmente cancelar?")
                 .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        servicosFirebase.cancelarRequisicao(requisicao.getId(), new ServicosFirebase.ResultadoListener() {
+                        servicosFirebase.cancelarRequisicao(requisicao, new ServicosFirebase.ResultadoListener() {
                             @Override
                             public void onSucesso(Object objeto) {
                                 Toast.makeText(getApplicationContext(), "Cancelado com sucesso", Toast.LENGTH_SHORT).show();

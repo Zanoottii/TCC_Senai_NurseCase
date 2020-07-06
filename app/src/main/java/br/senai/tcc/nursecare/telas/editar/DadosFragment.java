@@ -39,7 +39,7 @@ public class DadosFragment extends Fragment {
 
         etCpf.addTextChangedListener(new SimpleMaskTextWatcher(etCpf, new SimpleMaskFormatter("NNN.NNN.NNN-NN")));
         etDataNascimento.addTextChangedListener(new SimpleMaskTextWatcher(etDataNascimento, new SimpleMaskFormatter("NN/NN/NNNN")));
-        etTelefone.addTextChangedListener(new SimpleMaskTextWatcher(etTelefone, new SimpleMaskFormatter("(NN) NNNN-NNNNN")));
+        etTelefone.addTextChangedListener(new SimpleMaskTextWatcher(etTelefone, new SimpleMaskFormatter("(NN) NNNNN-NNNN")));
 
         etNome.setText(paciente.getNome());
         etSobrenome.setText(paciente.getSobrenome());

@@ -24,6 +24,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import br.senai.tcc.nursecare.R;
 import br.senai.tcc.nursecare.modelos.Requisicao;
@@ -86,8 +87,9 @@ public class AtendimentoActivity extends AppCompatActivity implements ServicosFi
 
         AtendimentoAdapter() {
             datahoraAtual = Calendar.getInstance().getTimeInMillis();
-            sdfData = new SimpleDateFormat("dd/MM");
-            sdfHora = new SimpleDateFormat("HH:mm");
+            Locale locale = new Locale("pt", "BR");
+            sdfData = new SimpleDateFormat("dd/MM", locale);
+            sdfHora = new SimpleDateFormat("HH:mm", locale);
         }
 
         @Override

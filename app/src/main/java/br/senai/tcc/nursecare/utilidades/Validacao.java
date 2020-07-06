@@ -9,8 +9,9 @@ import android.widget.TextView;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
-public class Validacao {
+public abstract class Validacao {
 
     public static boolean isCPF(String cpf) {
         if (cpf.equals("000.000.000-00") || cpf.equals("111.111.111-11") ||
@@ -25,10 +26,10 @@ public class Validacao {
         int d2 = 0;
         String numerosCpf = cpf.replaceAll("[.-]", "");
 
-        for (int i = 0; i < numerosCpf.length(); i++) {
+        for (int i = 0; i < numerosCpf.length() - 2; i++) {
             int digito = Integer.parseInt(numerosCpf.substring(i, i + 1));
-            d1 += (11 - i) * digito;
-            d2 += (12 - i) * digito;
+            d1 += (10 - i) * digito;
+            d2 += (11 - i) * digito;
         }
 
         int resto = d1 % 11;
@@ -42,7 +43,7 @@ public class Validacao {
 
     public static boolean isData(String data, String pattern) {
         try {
-            SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+            SimpleDateFormat sdf = new SimpleDateFormat(pattern, new Locale("pt", "BR"));
             sdf.setLenient(false);
             sdf.parse(data);
         } catch (ParseException e) {
@@ -53,7 +54,7 @@ public class Validacao {
 
     public static boolean isDataExpirada(String data) {
         try {
-            SimpleDateFormat sdf = new SimpleDateFormat("MM/yy");
+            SimpleDateFormat sdf = new SimpleDateFormat("MM/yy", new Locale("pt", "BR"));
             long informada = sdf.parse(data).getTime();
             long atual = sdf.parse(sdf.format(Calendar.getInstance().getTime())).getTime();
             return informada < atual;

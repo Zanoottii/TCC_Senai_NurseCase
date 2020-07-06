@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import br.senai.tcc.nursecare.R;
 import br.senai.tcc.nursecare.utilidades.Comum;
@@ -69,6 +70,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 etSenhaLogin.setError("Senha incorreta");
                 etSenhaLogin.setText("");
                 etSenhaLogin.requestFocus();
+                break;
+            default:
+                Toast.makeText(this, mensagem, Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -1,6 +1,5 @@
 package br.senai.tcc.nursecare.servicos;
 
-import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -17,6 +16,7 @@ import androidx.core.app.NotificationCompat;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 import br.senai.tcc.nursecare.R;
 import br.senai.tcc.nursecare.modelos.Requisicao;
@@ -81,7 +81,6 @@ public class NotificacaoService extends Service implements ServicosFirebase.Resu
     public void onErro(String mensagem) {
     }
 
-    @SuppressLint("SimpleDateFormat")
     private void notificar(Context context, Requisicao requisicao) {
         String titulo, mensagem;
         String enfermeiro = requisicao.getEnfermeiro();
@@ -102,7 +101,7 @@ public class NotificacaoService extends Service implements ServicosFirebase.Resu
             mensagem = "Seu atendimento foi aceito e agendado para ";
             requisicao.setEstado(4);
         }
-        mensagem += new SimpleDateFormat("dd/MM HH:mm").format(datahora);
+        mensagem += new SimpleDateFormat("dd/MM HH:mm", new Locale("pt", "BR")).format(datahora);
 
         Intent intent = new Intent(context, DetalhesActivity.class);
         intent.putExtra("requisicao", requisicao);

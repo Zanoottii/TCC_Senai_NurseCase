@@ -12,7 +12,7 @@ import java.util.Locale;
 
 import br.senai.tcc.nursecare.R;
 
-public class Comum {
+public abstract class Comum {
 
     public static String[] ESTADO_MSG = {
             "Não atendido",

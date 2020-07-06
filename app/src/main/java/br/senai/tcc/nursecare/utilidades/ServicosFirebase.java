@@ -81,6 +81,7 @@ public class ServicosFirebase implements FirebaseAuth.AuthStateListener {
 
     public interface ResultadoListener<T> {
         void onSucesso(T objeto);
+
         void onErro(String mensagem);
     }
 
@@ -565,20 +566,24 @@ public class ServicosFirebase implements FirebaseAuth.AuthStateListener {
 
     public void agendarRequisicao(Requisicao requisicao, final ResultadoListener resultado) {
         iniciarBanco();
-        db.collection("requisicoes")
-                .add(requisicao)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        resultado.onSucesso(null);
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        resultado.onErro("Erro ao agendar o atendimento");
-                    }
-                });
+        if (Calendar.getInstance().getTimeInMillis() < requisicao.getDatahora()) {
+            db.collection("requisicoes")
+                    .add(requisicao)
+                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                        @Override
+                        public void onSuccess(DocumentReference documentReference) {
+                            resultado.onSucesso(null);
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            resultado.onErro("Erro ao agendar o atendimento");
+                        }
+                    });
+        } else {
+            resultado.onErro("Não é possivel agendar este atendimento");
+        }
     }
 
     public void listarRequisicao(final ResultadoListener resultado) {
@@ -643,23 +648,27 @@ public class ServicosFirebase implements FirebaseAuth.AuthStateListener {
                 });
     }
 
-    public void cancelarRequisicao(String id, final ResultadoListener resultado) {
+    public void cancelarRequisicao(Requisicao requisicao, final ResultadoListener resultado) {
         iniciarBanco();
-        db.collection("requisicoes")
-                .document(id)
-                .update("enfermeiro", "0")
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        resultado.onSucesso(null);
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        resultado.onErro("Erro ao cancelar");
-                    }
-                });
+        if (Calendar.getInstance().getTimeInMillis() < requisicao.getDatahora()) {
+            db.collection("requisicoes")
+                    .document(requisicao.getId())
+                    .update("enfermeiro", "0")
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            resultado.onSucesso(null);
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            resultado.onErro("Erro ao cancelar");
+                        }
+                    });
+        } else {
+            resultado.onErro("Não é possivel cancelar");
+        }
     }
 
     public void proximoAtendimento(final ResultadoListener resultado) {

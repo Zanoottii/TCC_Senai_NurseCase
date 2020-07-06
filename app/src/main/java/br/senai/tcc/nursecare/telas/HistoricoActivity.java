@@ -23,6 +23,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import br.senai.tcc.nursecare.R;
 import br.senai.tcc.nursecare.modelos.Requisicao;
@@ -116,7 +117,7 @@ public class HistoricoActivity extends AppCompatActivity implements ServicosFire
         private SimpleDateFormat sdfDia;
 
         HistoricoAdapter() {
-            sdfDia = new SimpleDateFormat("dd");
+            sdfDia = new SimpleDateFormat("dd", new Locale("pt", "BR"));
         }
 
         @Override

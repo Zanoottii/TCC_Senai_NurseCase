@@ -1,5 +1,8 @@
 package br.senai.tcc.nursecare.modelos;
 
+import com.google.firebase.firestore.IgnoreExtraProperties;
+
+@IgnoreExtraProperties
 public class Cooperativa {
     private String nome, cnpj, municipio, uf;
 
