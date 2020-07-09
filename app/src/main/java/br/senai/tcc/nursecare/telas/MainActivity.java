@@ -29,6 +29,7 @@ import br.senai.tcc.nursecare.utilidades.Usuario;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, ServicosFirebase.ResultadoListener<Requisicao> {
 
     private ServicosFirebase servicosFirebase;
+    private Usuario usuario;
     private Paciente paciente;
     private Intent serviceIntent;
 
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         servicosFirebase = new ServicosFirebase(this);
-        Usuario usuario = Usuario.getInstance();
+        usuario = Usuario.getInstance();
         paciente = usuario.getPaciente();
         if (paciente == null) {
             servicosFirebase.deslogar();
@@ -60,8 +61,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.b3).setOnClickListener(this);
         findViewById(R.id.b4).setOnClickListener(this);
 
-        civUsuario.setImageBitmap(usuario.getFoto());
-
         servicosFirebase.proximoAtendimento(this);
 
         serviceIntent = new Intent(getApplicationContext(), NotificacaoService.class);
@@ -69,6 +68,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startForegroundService(serviceIntent);
         else
             startService(serviceIntent);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        civUsuario.setImageBitmap(usuario.getFoto());
     }
 
     @Override
