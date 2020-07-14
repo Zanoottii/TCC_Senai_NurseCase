@@ -30,6 +30,7 @@ public class UsuarioActivity extends AppCompatActivity implements View.OnClickLi
     private Usuario usuario;
     private ServicosFirebase servicosFirebase;
     private LinearLayout llFotoCheia;
+    private ImageView ivFotoCheia;
     private CircularImageView civFotoUsuario;
     private ProgressDialog progressDialog;
 
@@ -44,9 +45,10 @@ public class UsuarioActivity extends AppCompatActivity implements View.OnClickLi
 
         civFotoUsuario = findViewById(R.id.civFotoUsuario);
         llFotoCheia = findViewById(R.id.llFotoCheia);
+        ivFotoCheia = findViewById(R.id.ivFotoCheia);
 
         civFotoUsuario.setImageBitmap(usuario.getFoto());
-        ((ImageView) findViewById(R.id.ivFotoCheia)).setImageBitmap(usuario.getFoto());
+        ivFotoCheia.setImageBitmap(usuario.getFoto());
 
         civFotoUsuario.setOnClickListener(this);
         findViewById(R.id.ivFotoEditar).setOnClickListener(this);
@@ -120,6 +122,7 @@ public class UsuarioActivity extends AppCompatActivity implements View.OnClickLi
                                                 progressDialog.dismiss();
                                                 usuario.setFoto(bitmap);
                                                 civFotoUsuario.setImageBitmap(bitmap);
+                                                ivFotoCheia.setImageBitmap(bitmap);
                                             }
 
                                             @Override
